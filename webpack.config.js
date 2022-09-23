@@ -6,7 +6,8 @@ module.exports = {
     mode: 'development',
     entry: {
         'main': './index.tsx',
-        'App': './src/Components/App.tsx'
+        'App': './src/Components/App.tsx',
+        'background': './background.ts'
     },
     output: {
         path: path.resolve(__dirname, "dist/"),

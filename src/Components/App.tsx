@@ -1,14 +1,24 @@
-import React from 'react';
-export function App(){
+/*global chrome*/
+import React, { useEffect, useRef } from 'react';
 
-  return(
+
+
+
+export function App() {
+  const btnRef = useRef<HTMLButtonElement>()
+  useEffect(() => {
+    let color1 = '#000000';
+    // Initialize button with user's preferred color
+    chrome.storage.sync.get("color", ({ color }) => {
+      btnRef.current.style.backgroundColor = color1
+    });
+  })
+
+  return (
     <>
       <h1>The basis of our chrome extension</h1>
-  
+      <button ref={btnRef}>Change Color</button>
     </>
-
-
-
   )
 
 }
