@@ -5,7 +5,11 @@ import React, { useEffect, useRef } from 'react';
 
 
 export function App() {
+  
+  
   const btnRef = useRef<HTMLButtonElement>()
+  
+  
   useEffect(() => {
     let color1 = '#000000';
     // Initialize button with user's preferred color
