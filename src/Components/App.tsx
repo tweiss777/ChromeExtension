@@ -9,7 +9,8 @@ export function App() {
   
   const btnRef = useRef<HTMLButtonElement>()
   
-  
+  // you can change the color here after the component renders via useEffect.
+  // but of cource 
   useEffect(() => {
     let color1 = '#000000';
     // Initialize button with user's preferred color
