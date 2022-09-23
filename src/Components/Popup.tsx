@@ -16,9 +16,12 @@ export default function Popup(){
   })
 
   async function handleChangeColor(){
-
+    // get the current tab
+    let [tab] = await chrome.tabs.query({active: true, currentWindow: true})
 
     
+
+
   }
 
 
