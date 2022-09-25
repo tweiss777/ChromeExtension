@@ -17,3 +17,15 @@ chrome.runtime.onStartup.addListener(() => {
 chrome.runtime.onInstalled.addListener(() => {
   chrome.storage.sync.set({ 'color': color })
 })
+
+
+chrome.runtime.onMessage.addListener(
+  (request, sender, sendResponse) => {
+    console.log("tab created")
+    chrome.tabs.create({url: chrome.extension.getURL("newtabpage.html")}, turnTabRed);      
+  });
+
+function turnTabRed(tab: any)
+{
+  chrome.tabs.sendMessage(tab.id, {"action" : "setBackground"});
+}
