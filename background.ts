@@ -4,8 +4,16 @@
 
 const color: string = '#2ea6cf'
 
+// let the user know via the console that the extension has succesfully 
+// here you can do something like fetch data from a database or server
+chrome.runtime.onStartup.addListener(() => {
+    console.log("extension firing up")
+  }
+)
+
+
 
 // background.js
 chrome.runtime.onInstalled.addListener(() => {
-  chrome.storage.sync.set({'color': color})
+  chrome.storage.sync.set({ 'color': color })
 })

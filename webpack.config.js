@@ -7,7 +7,8 @@ module.exports = {
     entry: {
         'main': './index.tsx',
         'App': './src/Components/App.tsx',
-        'background': './background.ts'
+        'background': './background.ts',
+        'options': './src/Components/Options.tsx'
     },
     output: {
         path: path.resolve(__dirname, "dist/"),
@@ -38,7 +39,15 @@ module.exports = {
     },
     plugins:[
         new HtmlWebpackPlugin({
-            template: path.join(__dirname,"src","index.html")
+            title: 'index',
+            filename: 'index.html',
+            template: path.join(__dirname,"src","index.html"),
+
+        }),
+        new HtmlWebpackPlugin({
+            title: 'options',
+            filename: 'options.html',
+            template: path.join(__dirname, "src","options.html")
         })
         
     ]
