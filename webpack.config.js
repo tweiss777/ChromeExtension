@@ -19,12 +19,23 @@ module.exports = {
 
     module:{
         rules: [
+            // file loader
+            {
+                test: /\.(png|jpe?g|gif)$/i,
+                exclude: /node_modules/,
+                use: 'file-loader'
+
+            },
+
+            // typescript loader
             {
                 test: /\.ts(x?)$/,
                 exclude: /node_modules/,
                 use: 'ts-loader'
             },
             
+
+            // style loaders for css and scss
             {
                 test:/\.(css|scss)$/,
                 use: ['style-loader','css-loader','sass-loader']

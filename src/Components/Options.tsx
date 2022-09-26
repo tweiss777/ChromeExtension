@@ -4,18 +4,14 @@ import ReactDOM from 'react-dom';
 
 
 function Options(){
-
-
   return (
     <>
       <h1>
-        Options component
+        Coming soon
       </h1>
     </>
 
   )
 
 }
-
-
 ReactDOM.render(<Options />, document.getElementById('options'))

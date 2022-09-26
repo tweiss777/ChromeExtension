@@ -1,10 +1,20 @@
 import React, { useRef, useEffect } from 'react'
 import './styles/Popup.scss'
-import { changeColor } from '../functions/SetBackgroundColor'
 import Container from './Contrainer'
+import GoogleApp from './GoogleApp';
+import Row from './Row';
+import calendar from '../images/GoogleIcons/calendar.png'
+import google from '../images/GoogleIcons/google.png'
+import drive from '../images/GoogleIcons/drive.png'
+import docs from '../images/GoogleIcons/google-docs.png'
+import forms from '../images/GoogleIcons/google-forms.png'
+import sheets from '../images/GoogleIcons/sheets.png'
+import gmail from '../images/GoogleIcons/gmail.png'
+import youtube from '../images/GoogleIcons/youtube.png'
 
-export default function Popup(){
-  
+
+export default function Popup() {
+
   const myBtn = useRef<HTMLButtonElement>()
   // you can change the color here after the component renders via useEffect.
   // but of cource 
@@ -15,26 +25,26 @@ export default function Popup(){
     });
   })
 
-  async function handleChangeColor(){
-    // get the current tab
-    let [tab] = await chrome.tabs.query({active: true, currentWindow: true})
-    const tabId = tab.id
-    // execute your script here
-    chrome.scripting.executeScript({
-      target: { tabId },
-      func: changeColor,
-    })
-    
-  }
 
-
-
-
-  return(
+  return (
     <>
       <Container>
         {/* put all your google apps here */}
-        <h1>All your google apps go here </h1>
+        <Row>
+          <GoogleApp img_url={calendar} title='Calendar' link='https://calendar.google.com/' />
+          <GoogleApp img_url={google} title='Google' link='https://google.com/' />
+          <GoogleApp img_url={drive} title='Drive' link='https://drive.google.com/' />
+        </Row>
+        <Row>
+          <GoogleApp img_url={docs} title='Docs' link='https://calendar.google.com/' />
+          <GoogleApp img_url={forms} title='Forms' link='https://calendar.google.com/' />
+          <GoogleApp img_url={sheets} title='Sheets' link='https://calendar.google.com/' />
+        </Row>
+        <Row>
+          <GoogleApp title='Mail' link='https://mail.google.com/' img_url={gmail} />
+          <GoogleApp title='YouTube' link={'https://www.youtube.com/'} img_url={youtube} />
+          <GoogleApp title={''} link={''} img_url={''} />
+        </Row>
 
       </Container>
     </>
