@@ -9,7 +9,6 @@ module.exports = {
         'App': './src/Components/App.tsx',
         'background': './background.ts',
         'options': './src/Components/Options.tsx',
-        'changeColor': './src/scripts/changeColor.ts'
     },
     output: {
         path: path.resolve(__dirname, "dist/"),
@@ -49,13 +48,7 @@ module.exports = {
             title: 'options',
             filename: 'options.html',
             template: path.join(__dirname, "src","options.html")
-        }),
-        new HtmlWebpackPlugin({
-            title: 'newtabpage',
-            filename: 'newtabpage.html',
-            template: path.join(__dirname, "src","newtabpage.html")
-        })
-        
+        }),        
     ]
 }
 

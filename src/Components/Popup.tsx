@@ -1,7 +1,7 @@
 import React, { useRef, useEffect } from 'react'
-import './Popup.scss'
+import './styles/Popup.scss'
 import { changeColor } from '../functions/SetBackgroundColor'
-
+import Container from './Contrainer'
 
 export default function Popup(){
   
@@ -32,7 +32,11 @@ export default function Popup(){
 
   return(
     <>
-    <button onClick={handleChangeColor} ref={myBtn}>Click Me</button>
+      <Container>
+        {/* put all your google apps here */}
+        <h1>All your google apps go here </h1>
+
+      </Container>
     </>
 
 
