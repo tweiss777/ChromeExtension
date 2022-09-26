@@ -7,8 +7,6 @@ interface IProps{
 
 export default function Container({children}: IProps){
 
-
-
   return(
     <>
       <div className='container'>

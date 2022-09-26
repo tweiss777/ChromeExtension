@@ -6,12 +6,12 @@ import Row from './Row';
 import calendar from '../images/GoogleIcons/calendar.png'
 import google from '../images/GoogleIcons/google.png'
 import drive from '../images/GoogleIcons/drive.png'
-import docs from '../images/GoogleIcons/google-docs.png'
+import docs from '../images/GoogleIcons/docs.png'
 import forms from '../images/GoogleIcons/google-forms.png'
 import sheets from '../images/GoogleIcons/sheets.png'
 import gmail from '../images/GoogleIcons/gmail.png'
 import youtube from '../images/GoogleIcons/youtube.png'
-
+import meet from '../images/GoogleIcons/meet.png'
 
 export default function Popup() {
 
@@ -43,7 +43,7 @@ export default function Popup() {
         <Row>
           <GoogleApp title='Mail' link='https://mail.google.com/' img_url={gmail} />
           <GoogleApp title='YouTube' link={'https://www.youtube.com/'} img_url={youtube} />
-          <GoogleApp title={''} link={''} img_url={''} />
+          <GoogleApp title={'Meet'} link={'https://meet.google.com/'} img_url={meet} />
         </Row>
 
       </Container>

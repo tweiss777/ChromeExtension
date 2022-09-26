@@ -1,4 +1,15 @@
-$black: #000000;
+a{
+  text-decoration: none;
+  color: inherit;
+  &:visited{
+    text-decoration:none;
+  }
+  &:hover{
+    color: #E14D2A
+  }
+
+}
+
 
 .container{
   display: flex;
