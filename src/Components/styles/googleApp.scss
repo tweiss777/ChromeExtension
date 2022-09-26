@@ -3,6 +3,13 @@
 .app{
   padding: 10px;
   align-items: center;
+  transition: 0.5s ease-in;
+  
+  &:hover{
+    transform: scale(1.0)
+  }
+
+
 }
 
 .img_style{
@@ -10,6 +17,9 @@
   width: 50px;
 
 }
+
+
+
 
 
 
