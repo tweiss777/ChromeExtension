@@ -1,15 +1,18 @@
 @import "container";
+$google_blue: #2d6fd8;
 
 .app{
   padding: 10px;
   align-items: center;
-  transition: 0.5s ease-in;
-  
+  transition: ease-in 0.2s;
+  border-radius:15px;
+
   &:hover{
-    transform: scale(1.0)
+    background-color: #99c0ff;
+    color: $google_blue;
+    transform: scale(1.08)
+
   }
-
-
 }
 
 .img_style{
